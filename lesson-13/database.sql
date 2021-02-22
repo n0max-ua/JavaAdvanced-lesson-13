@@ -22,7 +22,7 @@ create table bucket (
 	id int not null primary key auto_increment,
 	user_id int not null,
     product_id int not null,
-    purchase_date timestamp DEFAULT NOW()
+    date timestamp DEFAULT NOW()
 );
 
 alter table bucket add foreign key (user_id) references user(id);
